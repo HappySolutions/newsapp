@@ -70,4 +70,28 @@ List<NewsItem> news = [
     category: 'Political',
     author: 'CNN',
   ),
+  NewsItem(
+    id: 3,
+    title: 'This is an amazing title here',
+    imgUrl:
+        'https://ichef.bbci.co.uk/news/976/cpsprodpb/CDCC/production/_129048625_photo01-01-2016002802.jpg.webp',
+    category: 'Medical',
+    author: 'National',
+  ),
+  NewsItem(
+    id: 2,
+    title: 'This is a very good title here',
+    imgUrl:
+        'https://ichef.bbci.co.uk/news/976/cpsprodpb/0A7C/production/_129048620_photo19-02-2023113613.jpg.webp',
+    category: 'Social',
+    author: 'BBC',
+  ),
+  NewsItem(
+    id: 1,
+    title: 'This is a freaking title here',
+    imgUrl:
+        'https://ichef.bbci.co.uk/news/976/cpsprodpb/5BA5/production/_129216432_womenafp.jpg.webp',
+    category: 'Sports',
+    author: 'CNN',
+  ),
 ];

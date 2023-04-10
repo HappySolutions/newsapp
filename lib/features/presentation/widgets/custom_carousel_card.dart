@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../data/models/news_item_madel.dart';
+import '../../data/models/news_item_model.dart';
 import '../screens/news_details_page.dart';
 
 class CustomCarouselCard extends StatefulWidget {

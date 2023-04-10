@@ -1,7 +1,10 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:newsapp/features/presentation/screens/news_details_page.dart';
 
+import '../../data/models/news_item_model.dart';
 import '../widgets/custom_carousel_card.dart';
+import '../widgets/recommendation_list_item.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -60,6 +63,28 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 20,
             ),
+            ...news
+                .map(
+                  (newsItem) => Padding(
+                    padding: const EdgeInsets.only(bottom: 20.0),
+                    child: InkWell(
+                      onTap: () {
+                        final index = news.indexOf(newsItem);
+                        Navigator.of(context, rootNavigator: true)
+                            .push(
+                              CupertinoPageRoute(
+                                builder: (_) => NewsDetailsPage(index: index),
+                              ),
+                            )
+                            .then((value) => setState(
+                                  () {},
+                                ));
+                      },
+                      child: RecommendationListItem(newsItem: newsItem),
+                    ),
+                  ),
+                )
+                .toList(),
           ],
         ),
       ),
